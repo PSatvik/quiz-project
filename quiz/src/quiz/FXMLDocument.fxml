@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="532.0" prefWidth="512.0" styleClass="exitButton" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Button fx:id="login" layoutX="87.0" layoutY="299.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="31.0" prefWidth="150.0" text="login" />
+      <Button fx:id="signup" layoutX="287.0" layoutY="299.0" mnemonicParsing="false" onAction="#signupButtonAction" prefHeight="39.0" prefWidth="150.0" text="sign up" />
+      <TextField fx:id="username" layoutX="257.0" layoutY="161.0" prefHeight="39.0" prefWidth="222.0" promptText="user_name" />
+      <Label layoutX="109.0" layoutY="169.0" prefHeight="31.0" prefWidth="131.0" text="UserName:" />
+      <Label layoutX="109.0" layoutY="235.0" prefHeight="31.0" prefWidth="131.0" text="Password:" />
+      <HBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="playerName" text="Praxis Player" />
+         </children>
+      </HBox>
+      <PasswordField fx:id="password" layoutX="257.0" layoutY="227.0" prefHeight="39.0" prefWidth="222.0" promptText="password" />
+      <Text layoutX="35.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="help" text="Dont't have account ? Click sign up button to register!!!" wrappingWidth="319.13671875" />
+      <Button fx:id="exit" layoutX="415.0" layoutY="479.0" mnemonicParsing="false" onAction="#exitButtonAction" styleClass="exitButton" text="Exit" />
+      <Text layoutX="35.0" layoutY="483.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="help" text="Click exit button to close." wrappingWidth="304.876953125" />
+      <Text layoutX="126.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weclome to praxis player :-)" wrappingWidth="271.876953125" />
+      <Text layoutX="35.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="help" text="Made in India with love!!" />
+    </children>
+   <stylesheets>
+      <URL value="@loginStyle.css" />
+      <URL value="@loginStyle.css" />
+   </stylesheets>
+</AnchorPane>

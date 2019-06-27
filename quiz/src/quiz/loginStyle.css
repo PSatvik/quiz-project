@@ -1,0 +1,80 @@
+/* 
+    Created on : 18 Jan, 2019, 10:07:29 PM
+    Author     : sanat
+*/
+
+.root{
+    -fx-background-image: url('icons/background4.png');
+    -fx-background-size: cover;
+    
+}
+
+.label{
+    -fx-font: 20px "Serif";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.button{
+    -fx-font: 20px "Serif";
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: cyan;
+    -fx-font-weight: bold;
+}
+
+.button:hover{
+    -fx-font: 20px "Serif";
+    -fx-background-color: transparent;
+    -fx-text-fill: cyan;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-color: cyan;
+    -fx-font-weight: bold;
+}
+
+.text-field{
+    -fx-font: 20px "Serif";
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: cyan;
+}
+
+.text-field:hover {
+    -fx-font: 20px "Serif";
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: cyan;
+}
+
+.exitButton{
+    -fx-font: 20px "Serif";
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-width: 0px 0px 0px 0px;
+    -fx-border-color: cyan;
+    -fx-font-weight: bold;
+}
+
+.exitButton:hover {
+    -fx-font: 20px "Serif";
+    -fx-background-color: transparent;
+    -fx-text-fill: cyan;
+    -fx-font-weight: bold;
+}
+
+.help{
+    -fx-font: 14px "Serif";
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+.playerName{
+    -fx-font: 30px "Serif";
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
