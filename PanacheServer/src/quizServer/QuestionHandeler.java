@@ -32,10 +32,11 @@ public class QuestionHandeler extends Thread {
         String contestID = dis.readUTF();
         String question = dis.readUTF();
         String answer = dis.readUTF();
+        String quiz_code = dis.readUTF();
         
         LogIn toAdd = new LogIn();
         toAdd.connect();
-        toAdd.insert(contestID,question,answer);
+        toAdd.insert(contestID,question,answer , quiz_code);
         
         }
         catch(Exception ex)

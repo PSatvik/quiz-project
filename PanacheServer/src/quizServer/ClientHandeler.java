@@ -125,9 +125,10 @@ public class ClientHandeler extends Thread {
                     String contestID = userName+"."+Integer.toString(count);
                     String question = br.readLine();
                     String answer = br.readLine();
+                    String quiz_code = br.readLine();
                     System.out.println(question);
                     System.out.println(answer);
-                    log.insert(contestID, question, answer);
+                    log.insert(contestID, question, answer , quiz_code);
                 }
                 
                 if(option.equalsIgnoreCase("takequiz"))
@@ -148,13 +149,14 @@ public class ClientHandeler extends Thread {
                    while(rs.next())
                    {
                        String question = rs.getString(2);
+                       String ans = rs.getString(3);
                        bw.write(question+"\n");
-                       System.out.println(question);
+                       bw.write(ans+ "\n");
+                       
                    }
                    
                    bw.flush();
                     
-                   
                 }
                 if(option.equalsIgnoreCase("end"))
                     break;
