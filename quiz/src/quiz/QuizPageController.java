@@ -21,6 +21,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -54,16 +55,20 @@ public class QuizPageController implements Initializable {
     private InputStreamReader isr;
     private BufferedReader br;
     private BufferedWriter bw;
-    int counter=0;
-    private String ques[];
+    int counter=0 , no_of_ques;
+    private String ques[] , ans[];
     @FXML
     private Label currentQuestionNo;
+    private int maxMark , obtainedMark;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
+        obtainedMark = 0;
+        counter = 0;
     }    
     
     public void setSocket(Socket so ,  BufferedReader br , BufferedWriter bw){
@@ -76,46 +81,84 @@ public class QuizPageController implements Initializable {
     private void displayquestion()
     {
         StringTokenizer st1 = new StringTokenizer(ques[counter],"#");
-        counter++;
+
         question.setText(st1.nextToken());
         option1.setText(st1.nextToken());
         option2.setText(st1.nextToken());
         option3.setText(st1.nextToken());
         option4.setText(st1.nextToken());
+        currentQuestionNo.setText(Integer.toString(counter+1)+"/"+Integer.toString(no_of_ques));
     }
     public void getQuestion()
     {
         try{
-             String inp = br.readLine();
-             int size = Integer.parseInt(inp);
-             System.out.println(size);
-             ques = new String[size];
+            String inp = br.readLine();
+            int size = Integer.parseInt(inp);
+            no_of_ques=size;
+            System.out.println(size);
+            ques = new String[size];
+            ans = new String[size];
              
-             for(int i=0; i<size; i++)
-             {
-                 String question = br.readLine();
-                 ques[i] = question;
-                 System.out.println(question);
-             }
-             displayquestion();
+            for(int i=0; i<size; i++)
+            {
+                String question = br.readLine();
+                ques[i] = question;
+                ans[i] = br.readLine();
+                System.out.println(question+"---->"+ans[i]);
+            }
+            displayquestion();
             
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }
 
-       
     }
     @FXML
     private void prevButtonAction(ActionEvent event) {
+        
     }
 
     @FXML
     private void submitButtonAction(ActionEvent event) {
+        
+        System.out.println("inside submit");
+        
+        String tmp = "";
+        if(option1.isSelected()){
+            tmp = option1.getText();
+        }
+        else if(option2.isSelected()){
+            tmp = option2.getText();
+        }
+        else if(option3.isSelected()){
+            tmp = option3.getText();
+        }
+        else if(option4.isSelected()){
+            tmp = option4.getText();
+        }
+        
+        if(tmp.equals(ans[counter])){
+            obtainedMark++;
+            nextButtonAction(event);
+        }
+        
+        System.out.println("submit button is clicked");
+        
     }
 
     @FXML
     private void nextButtonAction(ActionEvent event) {
-        displayquestion();
+        counter++;
+        if(counter >= no_of_ques ){
+            displayResult();
+        }
+        else
+            displayquestion();
+    }
+    
+    
+    public void displayResult(){
+        System.out.println(obtainedMark);
     }
     
 }
