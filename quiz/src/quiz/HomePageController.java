@@ -47,21 +47,11 @@ public class HomePageController implements Initializable {
     @FXML
     private HBox homeButton;
     @FXML
-    private HBox trendingButton;
-    @FXML
-    private HBox historyButton;
-    @FXML
-    private HBox watchLaterButton;
-    @FXML
     private HBox uploadButton;
-    @FXML
-    private HBox settingButton;
     @FXML
     private Label userName;
     GridPane gridPane = new GridPane();
     private int row;
-    private File[] preview;
-    final File dir = new File("C:\\Users\\Satvik\\Desktop\\preview");
     private AnchorPane rootPane;
     private Socket so;
     private InputStream is;
@@ -108,18 +98,6 @@ public class HomePageController implements Initializable {
         
     }
 
-    @FXML
-    private void trendingButtonAction(MouseEvent event) {
-       
-    }
-
-    @FXML
-    private void historyButtonAction(MouseEvent event) {
-    }
-
-    @FXML
-    private void watchLaterButton(MouseEvent event) {
-    }
 
     @FXML
     private void uploadButtonAction(MouseEvent event) {
@@ -145,11 +123,6 @@ public class HomePageController implements Initializable {
         } catch(IOException e) {
             System.out.println("error in uploading question");
         }
-    }
-
-    @FXML
-    private void settingButtonAction(MouseEvent event) {
-        
     }
 
     @FXML
@@ -182,5 +155,5 @@ public class HomePageController implements Initializable {
     private void exitButtonAction(ActionEvent event) {
     }
 
-    
+
 }

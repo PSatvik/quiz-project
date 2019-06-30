@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="400.0" minWidth="400.0" prefHeight="833.0" prefWidth="1262.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz.HomePageController">
+<AnchorPane id="AnchorPane" minHeight="400.0" minWidth="400.0" prefHeight="616.0" prefWidth="1052.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz.HomePageController">
     <stylesheets>
         <URL value="@homepage.css" />
     </stylesheets>
@@ -47,72 +47,12 @@
                   <Insets />
                </opaqueInsets>
             </HBox>
-            <HBox fx:id="trendingButton" onMouseClicked="#trendingButtonAction" prefHeight="51.0" prefWidth="250.0" styleClass="btn">
-               <children>
-                  <ImageView disable="true" fitHeight="40.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/trending.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="5.0" top="11.0" />
-                     </HBox.margin>
-                  </ImageView>
-                  <Label prefHeight="50.0" prefWidth="226.0" text=" Trending" textFill="#dbdbdb">
-                     <font>
-                        <Font size="25.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </HBox>
-            <HBox fx:id="historyButton" onMouseClicked="#historyButtonAction" prefHeight="51.0" prefWidth="250.0" styleClass="btn">
-               <children>
-                  <ImageView disable="true" fitHeight="40.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/history.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="5.0" top="11.0" />
-                     </HBox.margin>
-                  </ImageView>
-                  <Label prefHeight="50.0" prefWidth="226.0" text=" History" textFill="#dbdbdb">
-                     <font>
-                        <Font size="25.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </HBox>
-            <HBox fx:id="watchLaterButton" onMouseClicked="#watchLaterButton" prefHeight="51.0" prefWidth="250.0" styleClass="btn">
-               <children>
-                  <ImageView disable="true" fitHeight="40.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/watchLater.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="5.0" top="11.0" />
-                     </HBox.margin>
-                  </ImageView>
-                  <Label prefHeight="50.0" prefWidth="226.0" text=" Watch Later" textFill="#dbdbdb">
-                     <font>
-                        <Font size="25.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </HBox>
             <Line endX="100.0" startX="-100.0" stroke="#dbdbdb" strokeWidth="2.0">
                <VBox.margin>
                   <Insets left="20.0" top="20.0" />
                </VBox.margin>
             </Line>
-            <HBox fx:id="uploadButton" onMouseClicked="#uploadButtonAction" prefHeight="51.0" prefWidth="250.0" styleClass="btn">
+            <HBox fx:id="uploadButton" onMouseClicked="#uploadButtonAction" prefHeight="51.0" prefWidth="233.0" styleClass="btn">
                <children>
                   <ImageView disable="true" fitHeight="40.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -134,26 +74,6 @@
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
-            </HBox>
-            <HBox fx:id="settingButton" onMouseClicked="#settingButtonAction" prefHeight="51.0" prefWidth="250.0" styleClass="btn">
-               <children>
-                  <ImageView disable="true" fitHeight="40.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/setting.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="5.0" top="11.0" />
-                     </HBox.margin>
-                  </ImageView>
-                  <Label prefHeight="50.0" prefWidth="226.0" text=" Setting" textFill="#dbdbdb">
-                     <font>
-                        <Font size="25.0" />
-                     </font>
-                  </Label>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
             </HBox>
          </children></VBox>
       <HBox alignment="CENTER_RIGHT" layoutX="250.0" prefHeight="64.0" prefWidth="200.0" styleClass="topBar" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -191,12 +111,12 @@
             <Font size="28.0" />
          </font>
       </TextField>
-      <Button fx:id="startButton" layoutX="455.0" layoutY="490.0" mnemonicParsing="false" onAction="#startButtonAction" prefHeight="69.0" prefWidth="211.0" styleClass="startbutton" text="Start " textFill="#dbdbdb">
+      <Button fx:id="startButton" layoutX="450.0" layoutY="441.0" mnemonicParsing="false" onAction="#startButtonAction" prefHeight="69.0" prefWidth="211.0" styleClass="startbutton" text="Start " textFill="#dbdbdb">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </Button>
-      <Button fx:id="exitButton" layoutX="701.0" layoutY="490.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="69.0" prefWidth="211.0" styleClass="startbutton" text="Exit" textFill="#dbdbdb">
+      <Button fx:id="exitButton" layoutX="701.0" layoutY="441.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="69.0" prefWidth="211.0" styleClass="startbutton" text="Exit" textFill="#dbdbdb">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
