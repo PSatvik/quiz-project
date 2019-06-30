@@ -160,16 +160,12 @@ public class ClientHandeler extends Thread {
                     break;
             }
         }
-         catch(Exception ex)
-         {
-             System.out.println("Connection Lost: ");
-         }
+        catch(Exception ex)
+        {
+            System.out.println("Connection Lost: ");
+        }
          
          
-         
-         
-         
-     
      }
     
 }

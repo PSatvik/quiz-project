@@ -23,10 +23,10 @@ public class LogIn {
     int techOrStu;
     
     LogIn(String userName,String password)
-   {
+    {
        this.password = password;
        this.userName = userName;
-   }
+    }
    
    LogIn( String userName,String password, String name, int techOrStu)
    {
@@ -48,7 +48,7 @@ public class LogIn {
     {
         try{
             //Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz","root","root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/server","root","root");
         }
         catch(Exception e)
         {
@@ -194,7 +194,5 @@ public class LogIn {
         }
         return null;
     }
-    
-    
     
 }
