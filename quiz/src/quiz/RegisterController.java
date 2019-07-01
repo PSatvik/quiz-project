@@ -125,13 +125,12 @@ public class RegisterController implements Initializable {
             System.out.println(ex.getMessage());
         }
            
-       }
+    }
        
-    
 
-@FXML
-private void exitButtonAction(ActionEvent event) {
-        System.exit(0);
-}
+    @FXML
+    private void exitButtonAction(ActionEvent event) {
+            System.exit(0);
+    }
     
 }

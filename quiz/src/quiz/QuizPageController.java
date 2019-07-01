@@ -110,7 +110,6 @@ public class QuizPageController implements Initializable {
                 String question = br.readLine();
                 ques[i] = question;
                 ans[i] = br.readLine();
-                System.out.println(question+"---->"+ans[i]);
             }
             displayquestion();
             
@@ -143,9 +142,8 @@ public class QuizPageController implements Initializable {
         
         if(tmp.equals(ans[counter])){
             obtainedMark++;
-            nextButtonAction(event);
         }
-        
+        nextButtonAction(event);
         
     }
 
@@ -163,7 +161,7 @@ public class QuizPageController implements Initializable {
     public void displayResult(ActionEvent event){
         //System.out.println(obtainedMark);
         
-        String final_ans = "You have secured "+Integer.toString(obtainedMark)+" out of "+Integer.toString(no_of_ques);
+        String final_ans = " You have secured "+Integer.toString(obtainedMark)+" out of "+Integer.toString(no_of_ques)+" ";
         Label label = new Label(final_ans);
         Label result = new Label("Your result:");
         AnchorPane pane = new AnchorPane();

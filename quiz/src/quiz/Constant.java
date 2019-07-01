@@ -20,8 +20,4 @@ public class Constant {
     public static final int UPLOAD_PORT = 25002 ;
     public static final int SERVER_PORT = 25001;
     
-    // signals
-    public static final String UPLOAD = "1";
-    public static final String DISPLAY = "0";
-    public static final String STREAM = "2";
 }
