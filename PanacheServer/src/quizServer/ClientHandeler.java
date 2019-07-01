@@ -96,21 +96,6 @@ public class ClientHandeler extends Thread {
                      bw.flush();
                  }
             }
-            /*String signal = br.readLine();
-            if(signal == Constant.UPLOAD){
-                
-            }
-            else if(signal == Constant.DISPLAY){
-                
-            }
-            else if(signal == Constant.STREAM){
-                String videoID = br.readLine();
-                
-            }
-            else {
-                
-            }
-            */
             
             while(true && flag )
             {
