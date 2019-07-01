@@ -17,12 +17,18 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.TilePane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.stage.Popup;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -121,8 +127,6 @@ public class QuizPageController implements Initializable {
     @FXML
     private void submitButtonAction(ActionEvent event) {
         
-        System.out.println("inside submit");
-        
         String tmp = "";
         if(option1.isSelected()){
             tmp = option1.getText();
@@ -142,7 +146,6 @@ public class QuizPageController implements Initializable {
             nextButtonAction(event);
         }
         
-        System.out.println("submit button is clicked");
         
     }
 
@@ -150,15 +153,40 @@ public class QuizPageController implements Initializable {
     private void nextButtonAction(ActionEvent event) {
         counter++;
         if(counter >= no_of_ques ){
-            displayResult();
+            displayResult(event);
         }
         else
             displayquestion();
     }
     
     
-    public void displayResult(){
-        System.out.println(obtainedMark);
+    public void displayResult(ActionEvent event){
+        //System.out.println(obtainedMark);
+        
+        String final_ans = "You have secured "+Integer.toString(obtainedMark)+" out of "+Integer.toString(no_of_ques);
+        Label label = new Label(final_ans);
+        Label result = new Label("Your result:");
+        AnchorPane pane = new AnchorPane();
+        pane.setPrefSize(400, 400);
+   
+        pane.setStyle("-fx-background-color: #333645;");
+        Popup popup = new Popup();
+        label.setStyle("-fx-background-color: white;");
+        label.setFont(new Font(25.0));
+        result.setFont(new Font(40.0));
+        label.setLayoutX(50);
+        label.setLayoutY(200);
+        result.setLayoutX(100);
+        result.setLayoutY(100);
+        result.setTextFill(Color.RED);
+        
+        pane.getChildren().add(label);
+        pane.getChildren().add(result);
+        popup.getContent().add(pane);
+        
+        popup.setAutoHide(true);
+        popup.show((Stage)((Node) event.getSource()).getScene().getWindow());
+        
     }
     
 }
