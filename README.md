@@ -20,8 +20,11 @@ Add IP, port and other information of database in Constant.java in server code.
 
 ---
 # Developer
-<a href="https://github.com/itssanat">Sanat Kumar</a> <br>
+- <a href="https://github.com/itssanat">Sanat Kumar</a> <br>
 mail: <sanat@mnnit.ac.in>
+
+- <a href="https://github.com/PSatvik">Satvik Pandey</a> <br>
+
 
 ---
 ## License
