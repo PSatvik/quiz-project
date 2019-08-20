@@ -8,80 +8,90 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="727.0" prefWidth="972.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz.AddQuestionController">
+<AnchorPane id="AnchorPane" prefHeight="658.0" prefWidth="934.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz.AddQuestionController">
     <stylesheets>
         <URL value="@addquestion.css" />
     </stylesheets>
    <children>
-      <TextArea fx:id="question" layoutX="56.0" layoutY="100.0" prefHeight="200.0" prefWidth="844.0" promptText="enter question here">
+      <TextArea fx:id="question" layoutX="56.0" layoutY="56.0" prefHeight="163.0" prefWidth="844.0" promptText="enter question here">
          <font>
             <Font name="Serif Regular" size="24.0" />
          </font></TextArea>
-      <Label layoutX="56.0" layoutY="35.0" prefHeight="47.0" prefWidth="267.0" text="Question:">
+      <Label layoutX="56.0" prefHeight="47.0" prefWidth="267.0" text="Question:">
          <font>
             <Font name="System Bold Italic" size="37.0" />
          </font>
       </Label>
-      <Label layoutX="56.0" layoutY="347.0" prefHeight="29.0" prefWidth="223.0" text="Option 1:">
+      <Label layoutX="56.0" layoutY="261.0" prefHeight="34.0" prefWidth="141.0" text="Option 1:">
          <font>
             <Font name="System Bold Italic" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="56.0" layoutY="395.0" prefHeight="29.0" prefWidth="223.0" text="Option 2:">
+      <Label layoutX="56.0" layoutY="309.0" prefHeight="34.0" prefWidth="141.0" text="Option 2:">
          <font>
             <Font name="System Bold Italic" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="56.0" layoutY="493.0" prefHeight="29.0" prefWidth="223.0" text="Option 4:">
+      <Label layoutX="56.0" layoutY="407.0" prefHeight="34.0" prefWidth="141.0" text="Option 4:">
          <font>
             <Font name="System Bold Italic" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="56.0" layoutY="445.0" prefHeight="29.0" prefWidth="223.0" text="Option 3:">
+      <Label layoutX="56.0" layoutY="359.0" prefHeight="34.0" prefWidth="141.0" text="Option 3:">
          <font>
             <Font name="System Bold Italic" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="56.0" layoutY="583.0" prefHeight="29.0" prefWidth="223.0" text="Correct Ops:">
+      <Label layoutX="56.0" layoutY="497.0" prefHeight="34.0" prefWidth="151.0" text="Correct Ops:">
          <font>
             <Font name="System Bold Italic" size="23.0" />
          </font>
       </Label>
-      <TextField fx:id="option1" layoutX="323.0" layoutY="347.0">
+      <TextField fx:id="option1" layoutX="220.0" layoutY="257.0">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <TextField fx:id="option2" layoutX="323.0" layoutY="395.0">
+      <TextField fx:id="option2" layoutX="220.0" layoutY="305.0">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <TextField fx:id="option4" layoutX="323.0" layoutY="497.0">
+      <TextField fx:id="option4" layoutX="220.0" layoutY="403.0">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <TextField fx:id="option3" layoutX="323.0" layoutY="449.0">
+      <TextField fx:id="option3" layoutX="220.0" layoutY="355.0">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <TextField fx:id="correct_option" layoutX="323.0" layoutY="579.0">
+      <TextField fx:id="correct_option" layoutX="220.0" layoutY="493.0">
          <font>
             <Font size="19.0" />
          </font>
       </TextField>
-      <Button fx:id="submit" layoutX="56.0" layoutY="648.0" mnemonicParsing="false" onAction="#submitButtonAction" prefHeight="42.0" prefWidth="151.0" text="Submit">
+      <Button fx:id="submit" layoutX="56.0" layoutY="575.0" mnemonicParsing="false" onAction="#submitButtonAction" prefHeight="42.0" prefWidth="151.0" text="Submit">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Button>
-      <Button fx:id="exit" layoutX="381.0" layoutY="648.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="42.0" prefWidth="151.0" text="Exit">
+      <Button fx:id="exit" layoutX="381.0" layoutY="575.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="42.0" prefWidth="151.0" text="Exit">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Button>
       <Label fx:id="message" layoutX="268.0" layoutY="22.0" prefHeight="34.0" prefWidth="443.0" />
+      <TextField fx:id="quiz_code" layoutX="560.0" layoutY="363.0" prefHeight="48.0" prefWidth="193.0" promptText="quiz_code here">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <Label layoutX="560.0" layoutY="300.0" prefHeight="42.0" prefWidth="193.0" text="quiz_code :">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

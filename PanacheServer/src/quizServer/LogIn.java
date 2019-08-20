@@ -23,10 +23,10 @@ public class LogIn {
     int techOrStu;
     
     LogIn(String userName,String password)
-   {
+    {
        this.password = password;
        this.userName = userName;
-   }
+    }
    
    LogIn( String userName,String password, String name, int techOrStu)
    {
@@ -48,7 +48,7 @@ public class LogIn {
     {
         try{
             //Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz","root","root");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/server","root","root");
         }
         catch(Exception e)
         {
@@ -162,15 +162,16 @@ public class LogIn {
         return false;
     }
     
-    public void insert(String contestID, String question, String answer)
+    public void insert(String contestID, String question, String answer , String quiz_code)
     {
-        String sql = "insert into question values(?,?,?);";
+        String sql = "insert into question values(?,?,?,?);";
         
         try{
             PreparedStatement ptm = con.prepareStatement(sql);
             ptm.setString(1, contestID);
             ptm.setString(2, question);
             ptm.setString(3, answer);
+            ptm.setString(4, quiz_code);
             ptm.executeUpdate();
             
         }
@@ -182,7 +183,7 @@ public class LogIn {
     
     public ResultSet getQuestion(String quiz_code)
     {
-        String sql = "select * from question where contestID = ?;";
+        String sql = "select * from question where quiz_code = ?;";
         try{
             PreparedStatement ptm = con.prepareStatement(sql);
             ptm.setString(1, quiz_code);
@@ -194,7 +195,5 @@ public class LogIn {
         }
         return null;
     }
-    
-    
     
 }

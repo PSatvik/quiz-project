@@ -98,7 +98,7 @@ public class FXMLDocumentController implements Initializable {
             System.out.println(st);
             if(st.compareTo("Logged in Successfully") == 0)
             {
-                System.out.println("displaying to home page");
+                //System.out.println("displaying to home page");
                 try {
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
                     Parent root1 = (Parent) fxmlLoader.load();
@@ -117,7 +117,7 @@ public class FXMLDocumentController implements Initializable {
                 }
             }
             else{
-                System.out.println("laude lag gaye");
+                System.out.println("login failed...");
             }
             
             

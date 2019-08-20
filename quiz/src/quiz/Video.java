@@ -25,7 +25,6 @@ public class Video {
     
     public Video(File f,String userName,String videoName, String tags)
     {
-        
         this.f = f;
         this.userName = userName;
         this.videoName = videoName;
@@ -59,10 +58,10 @@ public class Video {
             System.out.println("hey");
             System.out.println(f.getAbsolutePath());
            
-             FileReader fr=new FileReader(f.getAbsolutePath());  
-             BufferedReader br = new BufferedReader(fr);
+            FileReader fr=new FileReader(f.getAbsolutePath());  
+            BufferedReader br = new BufferedReader(fr);
             
-                System.out.println("1");
+            System.out.println("1");
             //OutputStreamWriter osw = new OutputStreamWriter(os);
             //BufferedWriter bw = new BufferedWriter(osw);
             
@@ -88,7 +87,4 @@ public class Video {
             System.out.println(e.getMessage());
         }
     }
-    
-    
-    
 }

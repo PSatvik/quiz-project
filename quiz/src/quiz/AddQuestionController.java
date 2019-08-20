@@ -58,6 +58,8 @@ public class AddQuestionController implements Initializable {
     private InputStreamReader isr;
     private BufferedReader br;
     private BufferedWriter bw;
+    @FXML
+    private TextField quiz_code;
     /**
      * Initializes the controller class.
      */
@@ -83,11 +85,13 @@ public class AddQuestionController implements Initializable {
             String op3 =option3.getText();
             String op4 = option4.getText();
             String ans = correct_option.getText();
+            String q_code = quiz_code.getText();
             
             String totalquestion = que+"#"+op1+"#"+op2+"#"+op3+"#"+op4;
            
             bw.write(totalquestion+"\n");
             bw.write(ans+"\n");
+            bw.write(q_code+"\n");
             bw.flush();
             message.setText("Question added successfully");
             
@@ -95,8 +99,7 @@ public class AddQuestionController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(AddQuestionController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
+
     }
 
     @FXML

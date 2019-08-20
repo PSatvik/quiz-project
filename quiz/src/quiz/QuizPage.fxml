@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="846.0" prefWidth="1232.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz.QuizPageController">
+<AnchorPane id="AnchorPane" prefHeight="639.0" prefWidth="943.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz.QuizPageController">
     <stylesheets>
         <URL value="@quizpage.css" />
     </stylesheets>
@@ -18,59 +18,49 @@
             <Font size="29.0" />
          </font>
       </Label>
-      <TextArea fx:id="question" disable="true" layoutX="81.0" layoutY="78.0" prefHeight="234.0" prefWidth="1100.0" promptText="Question here......">
+      <TextArea fx:id="question" editable="false" layoutX="81.0" layoutY="78.0" prefHeight="215.0" prefWidth="811.0" promptText="Question here......">
          <font>
-            <Font size="27.0" />
+            <Font size="20.0" />
          </font>
       </TextArea>
-      <RadioButton fx:id="option1" layoutX="80.0" layoutY="347.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="601.0" text="option1">
+      <RadioButton fx:id="option1" layoutX="80.0" layoutY="293.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="601.0" text="option1">
          <font>
             <Font size="21.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="option2" layoutX="80.0" layoutY="411.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="601.0" text="option2">
+      <RadioButton fx:id="option2" layoutX="80.0" layoutY="347.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="601.0" text="option2">
          <font>
             <Font size="21.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="option4" layoutX="80.0" layoutY="539.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="601.0" text="option4">
+      <RadioButton fx:id="option4" layoutX="80.0" layoutY="455.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="601.0" text="option4">
          <font>
             <Font size="21.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="option3" layoutX="80.0" layoutY="475.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="601.0" text="option3">
+      <RadioButton fx:id="option3" layoutX="80.0" layoutY="401.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="601.0" text="option3">
          <font>
             <Font size="21.0" />
          </font>
       </RadioButton>
-      <Button fx:id="prevButton" layoutX="81.0" layoutY="682.0" mnemonicParsing="false" onAction="#prevButtonAction" prefHeight="62.0" prefWidth="208.0" text="Previous">
+      <Button fx:id="prevButton" layoutX="81.0" layoutY="538.0" mnemonicParsing="false" onAction="#prevButtonAction" prefHeight="29.0" prefWidth="141.0" text="Previous">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Button>
-      <Button fx:id="submitButton" layoutX="431.0" layoutY="682.0" mnemonicParsing="false" onAction="#submitButtonAction" prefHeight="62.0" prefWidth="208.0" text="Submit">
+      <Button fx:id="nextButton" layoutX="580.0" layoutY="538.0" mnemonicParsing="false" onAction="#nextButtonAction" prefHeight="43.0" prefWidth="129.0" text="Next">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Button>
-      <Button fx:id="nextButton" layoutX="775.0" layoutY="682.0" mnemonicParsing="false" onAction="#nextButtonAction" prefHeight="62.0" prefWidth="208.0" text="Next">
+      <Button fx:id="submitButton" layoutX="333.0" layoutY="538.0" mnemonicParsing="false" onAction="#submitButtonAction" prefHeight="43.0" prefWidth="129.0" text="Submit">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Button>
-      <Label fx:id="currentQuestionNo" layoutX="980.0" layoutY="7.0" prefHeight="54.0" prefWidth="68.0" styleClass="currQno" text="6">
+      <Label fx:id="currentQuestionNo" layoutX="795.0" layoutY="14.0" prefHeight="54.0" prefWidth="109.0" styleClass="currQno" text="  6/10">
          <font>
             <Font size="32.0" />
-         </font>
-      </Label>
-      <Label layoutX="1027.0" layoutY="7.0" prefHeight="51.0" prefWidth="39.0" text="of">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </Label>
-      <Label fx:id="totalQuextion" layoutX="1079.0" layoutY="7.0" prefHeight="54.0" prefWidth="82.0" text="10">
-         <font>
-            <Font size="27.0" />
          </font>
       </Label>
    </children>
